@@ -9,34 +9,50 @@ function showLogin() {
 }
 
 function signup() {
-    let name = document.getElementById("signupName").value;
+    let studentId = document.getElementById("signupID").value;
     let email = document.getElementById("signupEmail").value;
     let password = document.getElementById("signupPassword").value;
 
-    if (!name || !email || !password) {
+    if (!studentId || !email || !password) {
         alert("Please fill all fields");
         return;
     }
 
-    let user = { name, email, password };
-    localStorage.setItem(email, JSON.stringify(user));
+    // Get existing users
+    let allUsers = JSON.parse(localStorage.getItem("allUsers") || "[]");
+    
+    // Check if user already exists
+    if (allUsers.find(u => u.studentId === studentId)) {
+        alert("Student ID already registered");
+        return;
+    }
+
+    let user = { studentId, email, password };
+    allUsers.push(user);
+    localStorage.setItem("allUsers", JSON.stringify(allUsers));
 
     alert("Account created successfully!");
+    document.getElementById("signupForm").reset();
     showLogin();
 }
 
 function login() {
-    let email = document.getElementById("loginEmail").value;
+    let studentId = document.getElementById("loginID").value;
     let password = document.getElementById("loginPassword").value;
 
-    let storedUser = localStorage.getItem(email);
-
-    if (!storedUser) {
-        alert("User not found");
+    if (!studentId || !password) {
+        alert("Please fill all fields");
         return;
     }
 
-    let user = JSON.parse(storedUser);
+    // Get all stored users
+    let allUsers = JSON.parse(localStorage.getItem("allUsers") || "[]");
+    let user = allUsers.find(u => u.studentId === studentId);
+
+    if (!user) {
+        alert("User not found");
+        return;
+    }
 
     if (user.password === password) {
         alert("Login successful!");
