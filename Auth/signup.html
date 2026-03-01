@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alumni Sign Up | ADMS</title>
+    <link rel="stylesheet" href="auth.css">
+</head>
+<body>
+
+<div class="page-wrapper">
+    <!-- Logo Section -->
+    <div class="logo-section">
+        <img src="logo.png" alt="جامعة القصيم" class="logo">
+        <h1>College of Computer Alumni Portal</h1>
+    </div>
+
+<div class="container">
+    <h2>Alumni Sign Up</h2>
+    <input type="text" id="signupName" placeholder="Full Name">
+    <input type="text" id="signupID" placeholder="Alumni ID" pattern="\d{9}" maxlength="9" minlength="9" required>
+    <input type="email" id="signupEmail" placeholder="Email" required>
+    <input type="password" id="signupPassword" placeholder="Password" required>
+
+    <button onclick="signup()">Create Account</button>
+
+    <p>Already have an account? <a href="login.html">Login</a></p>
+</div>
+
+<script src="auth.js"></script>
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ADMS - Alumni Data Management System</title>
+    <link rel="stylesheet" href="home.css">
+</head>
+<body>
+
+<header>
+    <div class="logo">
+        <img id="headerLogo" src="../Auth/logo.png" alt="College of Computer Logo" class="header-logo">
+        <span id="logoTextSpan">ADMS | COC - Qassim University</span>
+    </div>
+
+    <nav>
+        <a href="#about" id="navAbout">About</a>
+        <a href="#features" id="navFeatures">Features</a>
+        <a href="#actions" id="navStart">Get Started</a>
+        <select id="langSwitcher" onchange="switchLang()">
+            <option value="en">English</option>
+            <option value="ar">العربية</option>
+        </select>
+    </nav>
+</header>
+
+<section class="hero">
+    <h1 id="heroTitle">Alumni Data Management System</h1>
+    <p id="heroText">Connecting the College of Computer with its graduates for a stronger future.</p>
+
+    <div class="buttons">
+        <a href="../Auth/login.html" class="btn" id="btnLogin">Alumni Login</a>
+        <a href="../Auth/signup.html" class="btn" id="btnSignup">Alumni Sign Up</a>
+        <a href="../Auth/login.html?role=admin" class="btn admin" id="btnAdmin">Admin Login</a>
+    </div>
+</section>
+
+<section id="about" class="section">
+    <h2 id="aboutTitle">About the System</h2>
+    <p id="aboutText">
+        The Alumni Data Management System (ADMS) is designed for the College of Computer at 
+        Qassim University to maintain strong communication with graduates. It helps track alumni 
+        career paths, share announcements, manage events, and support long-term engagement.
+    </p>
+</section>
+
+<section id="features" class="section">
+    <h2 id="featuresTitle">Main Features</h2>
+
+    <div class="grid">
+        <div class="card">
+            <h3 id="f1Title">Alumni Profiles</h3>
+            <p id="f1Text">Graduates can update their personal and career information anytime.</p>
+        </div>
+
+
+
+        <div class="card">
+            <h3 id="f3Title">Job Opportunities</h3>
+            <p id="f3Text">Alumni can view and share job postings to support career growth.</p>
+        </div>
+
+        <div class="card">
+            <h3 id="f4Title">Events & Announcements</h3>
+            <p id="f4Text">Stay updated with college events, workshops, and important news.</p>
+        </div>
+
+        <div class="card">
+            <h3 id="f5Title">Search & Filtering</h3>
+            <p id="f5Text">Admins can search alumni by major, graduation year, or employer.</p>
+        </div>
+
+        <div class="card">
+            <h3 id="f6Title">Secure Access</h3>
+            <p id="f6Text">Role-based login ensures data safety for alumni and administrators.</p>
+        </div>
+    </div>
+</section>
+
+<section id="actions" class="section">
+    <h2 id="startTitle">Get Started</h2>
+    <p id="startText">Select your role to continue:</p>
+
+    <div class="buttons">
+        <a href="../Auth/login.html" class="btn" id="startLogin">Alumni Login</a>
+        <a href="../Auth/signup.html" class="btn" id="startSignup">Alumni Sign Up</a>
+        <a href="../Auth/login.html?role=admin" class="btn admin" id="startAdmin">Admin Login</a>
+    </div>
+</section>
+
+<footer>
+    <p id="footerText">© 2026 Qassim University - College of Computer | Alumni Data Management System</p>
+</footer>
+
+<script src="lang.js"></script>
+</body>
+</html>

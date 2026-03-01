@@ -1,0 +1,96 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background:
+        linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0.8)),
+        url('../Auth/COC.jpeg') no-repeat center center fixed;
+    background-size: cover;
+    color: #333;
+}
+
+header {
+    background: rgba(255,255,255,0.9);
+    color: #333;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+header nav a {
+    color: #333;
+    margin-left: 20px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.header-logo {
+    height: 80px;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+.hero {
+    text-align: center;
+    padding: 80px 20px;
+    background: #43a047;
+    color: white;
+}
+
+.hero .btn {
+    display: inline-block;
+    margin: 10px;
+    padding: 12px 25px;
+    background: white;
+    color: #43a047;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.hero .admin {
+    background: #2e7d32;
+    color: white;
+}
+
+.section {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.buttons .btn {
+    margin: 10px;
+    padding: 12px 25px;
+    background: #43a047;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.buttons .admin {
+    background: #2e7d32;
+    color: white;
+}
+
+footer {
+    background: rgba(255,255,255,0.9);
+    color: #333;
+    text-align: center;
+    padding: 15px;
+    margin-top: 40px;
+    border-top: 1px solid #ddd;
+}
